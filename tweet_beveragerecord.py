@@ -12,9 +12,9 @@ data = ext_row[0]
 
 # Twitter投稿用の文を作る
 drink_name = data[1]
-drink_star = '★' * data[3]
-drink_remark = data[4]
-drink_link = data[5]
+drink_star = '★' * data[2]
+drink_remark = data[3]
+drink_link = data[4]
     
 tweet_content = '「' + drink_name + '」\n' \
                 + '・お気に入り度：' + drink_star + '\n' \
