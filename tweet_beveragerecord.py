@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy
 import tweepy
+import os
 
 # CSVファイルのリストから1行をランダム抽出
 df = pd.read_csv('drinklist.csv', encoding='shift_jis')
@@ -23,7 +24,10 @@ tweet_content = '「' + drink_name + '」\n' \
                 + drink_link
 
 # 各種キーを入れる
-
+CONSUMER_KEY = os.environ['CONSUMER_KEY']
+CONSUMER_SECRET = os.environ['CONSUMER_SECRET']
+ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
+ACCESS_SECRET = os.environ['ACCESS_SECRET']
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_SECRET)
 
