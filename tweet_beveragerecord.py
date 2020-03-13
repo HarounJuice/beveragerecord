@@ -4,7 +4,7 @@ import tweepy
 import os
 
 # CSVファイルのリストから1行をランダム抽出
-df = pd.read_csv('drinklist.csv', encoding='shift_jis')
+df = pd.read_csv('drinklist.csv', encoding='cp932')
 ds = df.sample()
 
 # 抽出した行をDataFrame型からList型に変換
