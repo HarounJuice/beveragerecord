@@ -23,7 +23,7 @@ api = tweepy.API(auth)
 for mentions in tweepy.Cursor(api.mentions_timeline).items(50):
     mention_time = mentions.created_at
     user_name = mentions.user.name
-    user_ID = mentions.user.screen_name
+    user_ID = str(mentions.user.screen_name)
     tweet_ID = mentions.id
     mention_content = mentions.text
 
