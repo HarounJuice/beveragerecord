@@ -1,3 +1,4 @@
+import os
 import tweepy
 import datetime
 import pandas as pd
